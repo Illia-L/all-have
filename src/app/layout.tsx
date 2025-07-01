@@ -1,8 +1,10 @@
-import { CssBaseline, ThemeProvider } from '@mui/material';
+import theme from '@/theme';
+import { CssBaseline, ThemeProvider, Typography } from '@mui/material';
 import Box from '@mui/material/Box'
 import type { Metadata } from 'next';
-import theme from '@/theme/index';
 import { Montserrat, Inter } from 'next/font/google';
+
+console.log({theme});
 
 const montserrat = Montserrat({
   subsets: ['cyrillic', 'latin'],
@@ -35,7 +37,7 @@ export default function RootLayout({
         className={montserrat.className + ' ' + inter.className}
       >
         <body>
-          <Box component='header'>Header</Box>
+          <Box component='header'><Typography variant='category'>Header</Typography></Box>
 
           <Box component='main'>{children}</Box>
 
