@@ -46,6 +46,8 @@ declare module '@mui/material/styles' {
       header: string;
       icon1: string;
       buttonHover: string;
+      buttonFocus: string;
+      buttonPress: string;
       button1: string;
       categoryHover: string;
       icon2: string;
@@ -60,6 +62,8 @@ declare module '@mui/material/styles' {
       header: string;
       icon1: string;
       buttonHover: string;
+      buttonFocus: string;
+      buttonPress: string;
       button1: string;
       categoryHover: string;
       icon2: string;
@@ -152,7 +156,7 @@ theme.typography.header1 = {
 theme.typography.category = {
   fontSize: 24,
   fontWeight: 500,
-  lineHeight: 'normal',
+  lineHeight: '1.2',
 };
 
 theme.typography.footer = {
@@ -165,7 +169,7 @@ theme.typography.footer = {
 theme.typography.categoryTab = {
   fontSize: 20,
   fontWeight: 500,
-  lineHeight: 'normal',
+  lineHeight: '1.2',
 };
 
 theme.typography.h1Tab = {
@@ -194,9 +198,9 @@ theme.typography.h2Mob = {
 
 theme.typography.categoryMob = {
   fontFamily: 'var(--font-inter), sans-serif',
-  fontSize: 20,
+  fontSize: '1.25rem',
   fontWeight: 400,
-  lineHeight: 'normal',
+  lineHeight: '1.2',
 };
 
 theme.typography.body2Mob = {
@@ -210,6 +214,8 @@ theme.palette.custom = {
   header: '#0A15AE',
   icon1: '#000BD6',
   buttonHover: '#000EFF',
+  buttonFocus: '#2909CE',
+  buttonPress: '#000EFF',
   button1: '#2541FF',
   categoryHover: '#4D73FF',
   icon2: '#7FA8FF',
@@ -228,6 +234,57 @@ theme.components = {
           color: 'inherit',
         },
       },
+    },
+  },
+
+  MuiButton: {
+    styleOverrides: {
+      root: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 32,
+        height: 56,
+      },
+
+      containedPrimary: ({ theme }) => ({
+        ...theme.typography.button,
+        color: '#FAF8F8',
+        backgroundColor: theme.palette.custom.button1,
+        '&:hover': {
+          backgroundColor: theme.palette.custom.buttonHover,
+        },
+        '&:focus': {
+          backgroundColor: theme.palette.custom.buttonFocus,
+        },
+        '&:active': {
+          backgroundColor: theme.palette.custom.buttonPress,
+        },
+        '&.Mui-disabled': {
+          backgroundColor: '#1D1B201A',
+          color: '#1D1B20',
+        },
+      }),
+
+      outlined: ({ theme }) => ({
+        borderWidth: 1,
+        borderStyle: 'solid',
+        color: theme.palette.custom.text1,
+        borderBlockColor: theme.palette.custom.button1,
+        '&:hover': {
+          backgroundColor: '#6750A414',
+        },
+        '&:focus': {
+          backgroundColor: '#6750A414',
+        },
+        '&:active': {
+          backgroundColor: '#6750A414',
+        },
+        '&.Mui-disabled': {
+          backgroundColor: '#1D1B201A',
+          color: '#1D1B20',
+        },
+      }),
     },
   },
 };
