@@ -273,7 +273,7 @@ theme.components = {
         borderWidth: 1,
         borderStyle: 'solid',
         color: theme.palette.custom.text1,
-        borderBlockColor: theme.palette.custom.button1,
+        borderColor: theme.palette.custom.button1,
         '&:hover': {
           backgroundColor: '#6750A414',
         },

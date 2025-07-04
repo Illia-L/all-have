@@ -1,5 +1,3 @@
-'use client';
-
 import { Category } from '@/dev-data/categories';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';

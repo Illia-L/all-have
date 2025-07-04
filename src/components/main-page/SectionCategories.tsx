@@ -1,5 +1,3 @@
-'use client';
-
 import { categories } from '@/dev-data/categories';
 import { useMediaQuery } from '@mui/material';
 import Box from '@mui/material/Box';
