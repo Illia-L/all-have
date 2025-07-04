@@ -64,6 +64,7 @@ export default function ProductCard() {
               <Button
                 variant='outlined'
                 sx={{
+                  gap: 1,
                   borderRadius: { xs: 1, md: 4 },
                   minWidth: 0,
                   width: { xs: 44, md: '100%' },
