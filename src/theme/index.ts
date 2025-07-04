@@ -53,6 +53,7 @@ declare module '@mui/material/styles' {
       icon2: string;
       categoryCard: string;
       cardArticle: string;
+      cardArticleHover: string;
       text2: string;
     };
   }
@@ -69,6 +70,7 @@ declare module '@mui/material/styles' {
       icon2: string;
       categoryCard: string;
       cardArticle: string;
+      cardArticleHover: string;
       text2: string;
     };
   }
@@ -221,6 +223,7 @@ theme.palette.custom = {
   icon2: '#7FA8FF',
   categoryCard: '#AFCBFF',
   cardArticle: '#E7F0FF52',
+  cardArticleHover: '#D2E5FF',
   text2: '#F8F9FA',
 };
 

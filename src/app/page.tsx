@@ -1,6 +1,7 @@
 'use client';
 
 import SectionCategories from '@/components/main-page/SectionCategories';
+import SectionProducts from '@/components/main-page/SectionProducts';
 import TopBanner from '@/components/main-page/TopBanner';
 import Box from '@mui/material/Box';
 
@@ -10,12 +11,14 @@ export default function Home() {
       sx={{
         width: { xs: 375, md: 833, lg: 1440 },
         px: { xs: 2, md: 4, lg: 10 },
-        color: 'custom.text1'
+        color: 'custom.text1',
       }}
     >
-      <TopBanner/>
+      <TopBanner />
 
-      <SectionCategories/>
+      <SectionCategories />
+
+      <SectionProducts />
     </Box>
   );
 }
