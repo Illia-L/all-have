@@ -1,3 +1,4 @@
+import Header from '@/components/Header/Header';
 import theme from '@/theme';
 import { CssBaseline, ThemeProvider, Typography } from '@mui/material';
 import Box from '@mui/material/Box'
@@ -37,7 +38,9 @@ export default function RootLayout({
         className={montserrat.className + ' ' + inter.className}
       >
         <body>
-          <Box component='header'><Typography variant='category'>Header</Typography></Box>
+          <Box component='header'><Typography variant='category'>
+            <Header />
+          </Typography></Box>
 
           <Box component='main'>{children}</Box>
 
